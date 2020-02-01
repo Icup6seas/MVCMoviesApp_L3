@@ -39,16 +39,29 @@ namespace MVCMoviesApp.Controllers
                 </ul>";
         }
 
+        //[HttpPost]
+        //public ActionResult NewMovie(string title, string director, int yearRelease, bool inCollection)
+        //{
+        //    //I think ConfirmMovie.cshtml is preventing the formatting...
+        //    ViewBag.Message =
+        //    "Title: " + title + " " + Environment.NewLine +
+        //    "Director: " + director + " " + Environment.NewLine +
+        //    "Year Released: " + yearRelease + " " + Environment.NewLine +
+        //    "In Collection?: " + inCollection;
+        //    return View("ConfirmMovie");
+        //}
+
         [HttpPost]
         public ActionResult NewMovie(string title, string director, int yearRelease, bool inCollection)
         {
-            //I think ConfirmMovie.cshtml is preventing the formatting...
-            ViewBag.Message =
-            "Title: " + title + " " + Environment.NewLine +
-            "Director: " + director + " " + Environment.NewLine +
-            "Year Released: " + yearRelease + " " + Environment.NewLine +
-            "In Collection?: " + inCollection;
-            return View("ConfirmMovie");
+            MovieModel m = new MovieModel()
+            {
+                Title = title,
+                Director = director,
+                YearRelease = yearRelease,
+                InCollection = inCollection
+            };
+            return View("ConfirmMovie", m);
         }
 
         public ActionResult NewMovie()

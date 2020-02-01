@@ -7,12 +7,21 @@
 <form name="newMovie" method="post">
     <p>Title: <input type="text" name="Title" id="Title" /></p>
     <p>Director: <input type="text" name="Director" id="Director" /></p>
-    <p>Year Released: <input type="number" min="1850" max="2020" name="YearRelease" id="YearRelease" </p>
+    <p>Year Released: <input type="number" min="1850" max="2020" name="YearRelease" id="YearRelease" /> </p>
     <p>
-        Is this currently in my collection? (choose an option)<select name="InCollection" id="InCollection">
-            <option value="true">Yes</option>
-            <option value="false">No</option>
+        Is this currently in my collection? (choose an option)
+        <select name="InCollection" id="InCollection">                             <option value="false">No</option>
+           <option value="true">Yes</option>
         </select>
     </p>
-    <input type="submit" value="Submit Movie" />
+   @*<input type="submit" value="Submit Movie" />*@
+    <button name="submit" id="submit">Submit</button>
 </form>
+
+@*<h2>New Movie Form</h2>
+<form name="newemp" method="post">
+    <p>ID: <input type=number name="empID" id="empID" /></p>
+    <p>Name: <input type="text" name="empName" id="empName" /></p>
+    <p>Salary: <input type="number" placeholder="$0.00" name="empSal" id="empSal" /></p>
+    <button name="submit" id="submit">Submit</button>
+</form>*@

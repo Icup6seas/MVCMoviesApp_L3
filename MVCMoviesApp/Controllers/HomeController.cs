@@ -15,14 +15,14 @@ namespace MVCMoviesApp.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Welcome to the MoviesApp! Here we hold all of your movies!";
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Currently only supported by no one...";
 
             return View();
         }
