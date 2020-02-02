@@ -1,14 +1,18 @@
 ﻿
 @{
     ViewBag.Title = "Movie Index";
+    string[] movies = { "Alien", "Blood Sport", "Die Hard", "Enter the Dragon", "John Wick", "Rambo", "Rocky", "Terminator" };
+    int moviesLength = movies.Length;
+    var x = 0;
 }
-@section header{
-    <header>
-        <small>Movies Movies Movies!</small>
-    </header>
-}
-<h2>Movie Index</h2>
-<img src="~/Content/popcorn.jpg" style="width:200px;" />
+
+<hr />
+<img src="~/Content/popcorn.jpg" alt="popcorn" style="float:right;width:200px;" />
+<h2>Your Movie List!</h2>
+@for (x = 0; x < moviesLength; x++)
+{<p>@movies[x]</p>}
+<hr />
+
 @section scripts{
     <script>
         $("h2").css({ "background-color": "lightblue", "color": "white", "padding": "10px" });

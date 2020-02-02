@@ -53,8 +53,11 @@
                         @Html.ActionLink("New Movie", "NewMovie", "Movies")
                     </li>
                     <li class="nav-item nav-link">
-                        @Html.ActionLink("List All Movies", "ListAllMovies", "Movies")
+                        @Html.ActionLink("Movie Age", "MovieAgeCalculator", "Movies")
                     </li>
+                    @*<li class="nav-item nav-link">
+            @Html.ActionLink("List All Movies", "ListAllMovies", "Movies")
+        </li>*@
                 </ul>
             </div>
         </nav>
@@ -64,7 +67,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p> @DateTime.Now.Year - &copy; ChrisCozzz MoviesApp</p>
         </footer>
     </div>
 
