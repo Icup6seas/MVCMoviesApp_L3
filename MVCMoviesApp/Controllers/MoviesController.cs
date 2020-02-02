@@ -39,18 +39,6 @@ namespace MVCMoviesApp.Controllers
                 </ul>";
         }
 
-        //[HttpPost]
-        //public ActionResult NewMovie(string title, string director, int yearRelease, bool inCollection)
-        //{
-        //    //I think ConfirmMovie.cshtml is preventing the formatting...
-        //    ViewBag.Message =
-        //    "Title: " + title + " " + Environment.NewLine +
-        //    "Director: " + director + " " + Environment.NewLine +
-        //    "Year Released: " + yearRelease + " " + Environment.NewLine +
-        //    "In Collection?: " + inCollection;
-        //    return View("ConfirmMovie");
-        //}
-
         [HttpPost]
         public ActionResult NewMovie(string title, string director, int yearRelease, bool inCollection)
         {
@@ -67,6 +55,11 @@ namespace MVCMoviesApp.Controllers
         public ActionResult NewMovie()
         {
             return View("NewMovieForm");
+        }
+
+        public ActionResult MovieAgeCalculator()
+        {
+            return View();
         }
     }
 }

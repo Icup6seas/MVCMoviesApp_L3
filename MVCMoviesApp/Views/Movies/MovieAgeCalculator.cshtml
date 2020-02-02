@@ -1,0 +1,45 @@
+﻿
+@{
+    var movieAge = "";
+    if (IsPost)
+    {
+        var releaseY = Request["releaseYear"];
+        var yearRelease = releaseY.AsInt();
+        var currentY = Request["currentYear"];
+        var yearCurrent = currentY.AsInt();
+        int deltaYears = yearCurrent- yearRelease;
+
+        if (deltaYears >= 30)
+        {
+            <script>
+                document.write("Wow, this is an older movie!!!");
+            </script>
+        }
+        else
+        {
+            <script>
+                document.write("This movie is newer!");
+            </script>
+        }
+
+        movieAge = "This movie is " + deltaYears + " years old";
+    }
+}
+
+<html>
+<body style="background-color: lightblue; font-family: Verdana, Arial;">
+    <form action="" method="post">
+        <p>
+            <label for="releaseYear">Movie Release Year:</label><br />
+            <input type="text" name="releaseYear" />
+        </p>
+        <p>
+            <label for="currentYear">Current Year:</label><br />
+            <input type="text" name="currentYear" />
+        </p>
+        <p><input type="submit" value=" How Old Is It?! " /></p>
+    </form>
+    <p>@movieAge</p>
+</body>
+</html>
+
